@@ -12,6 +12,12 @@ I am heavily involved in basketball coaching at the high school and college leve
 * **Instructional Architecture:** Engineered a **Dual-Mode System** to resolve initial behavioral "drifts":
     * **Keyword: SCOUT** – Triggers an aggressive tactical mode to hunt for opponent weaknesses.
     * **Keyword: AUDIT** – Triggers an internal focus on player development and training.
+### System Previews
+<img src="./Chatbox%20Scout%20Preview.png" width="400" alt="Scout Mode"> 
+<img src="./Chatbox%20Audit%20Preview.png" width="400" alt="Audit Mode">
+
+**Audit Mode:**
+![Audit Preview](./Chatbox%20Audit%20Preview.png)
 
 ### 💡 The Breakthrough
 The biggest challenge was shifting the AI from a "trainer" mindset to a "scout" mindset. Through iterative prompting and "nuclear updates" to the logic, I successfully built a tool that switches gears based on specific coaching needs, making the scouting process significantly faster and more precise.
