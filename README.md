@@ -13,7 +13,7 @@ I am heavily involved in basketball coaching at the high school and college leve
     * **Keyword: SCOUT** – Triggers an aggressive tactical mode to hunt for opponent weaknesses.
     * **Keyword: AUDIT** – Triggers an internal focus on player development and training.
 ### System Previews
-<img src="./Chatbox%20Scout%20Preview.png" width="400" alt="Scout Mode"> 
+<img src="./Chatbox%20Scout%40Preview.png" width="400" alt="Scout Mode"> 
 <img src="./Chatbox%20Audit%20Preview.png" width="400" alt="Audit Mode">
 
 **Audit Mode:**
