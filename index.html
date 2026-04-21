@@ -1,86 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brianna Gliesmann | Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Brianna Gliesmann Portfolio</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background-color: #ffffff; color: #24292f; padding: 50px 0; }
-        .container { max-width: 900px; }
-        .accordion-item { border: 1px solid #d0d7de; border-radius: 6px !important; margin-bottom: 20px; overflow: hidden; }
-        .accordion-button { background-color: #f6f8fa !important; color: #0969da !important; font-size: 1.5rem; font-weight: 600; padding: 20px; }
-        .accordion-button:not(.collapsed) { border-bottom: 1px solid #d0d7de; box-shadow: none; }
-        .project-img { border-radius: 6px; width: 100%; border: 1px solid #d0d7de; margin-top: 10px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: #24292f; margin: 40px auto; max-width: 900px; padding: 0 20px; }
+        h1 { color: #0969da; font-size: 32px; border-bottom: 1px solid #d0d7de; padding-bottom: 8px; }
+        h2 { font-size: 24px; font-weight: 600; margin-top: 24px; margin-bottom: 16px; border-bottom: 1px solid #d0d7de; padding-bottom: 8px; }
+        h3 { font-size: 20px; font-weight: 600; margin-top: 24px; margin-bottom: 16px; }
+        p { margin-top: 0; margin-bottom: 16px; line-height: 1.5; }
+        ul { padding-left: 2em; margin-top: 0; margin-bottom: 16px; }
+        li { margin-bottom: 0.25em; }
+        .project-img { width: 100%; border-radius: 6px; border: 1px solid #d0d7de; margin-top: 10px; }
+        
+        /* The Clickable Part */
+        details { border: 1px solid #d0d7de; border-radius: 6px; margin-bottom: 16px; }
+        summary { padding: 16px; font-size: 20px; font-weight: 600; cursor: pointer; list-style: none; background-color: #f6f8fa; }
+        summary::-webkit-details-marker { display: none; }
+        details[open] summary { border-bottom: 1px solid #d0d7de; }
+        .content { padding: 16px 32px; }
     </style>
 </head>
 <body>
 
-<div class="container">
     <h1>Brianna Gliesmann</h1>
-    <h2 class="text-muted mb-5">[Brianna Gliesmann] | AI Data Analytics Portfolio</h2>
+    <p style="font-size: 26px; font-weight: 400; margin-top: 20px;">[Brianna Gliesmann] | AI Data Analytics Portfolio</p>
 
-    <div class="accordion" id="portfolioAccordion">
-        
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    🏀 Featured Project: Basketball Player Analysis AI Chatbot
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
-                <div class="accordion-body" style="padding: 30px;">
-                    
-                    <p><strong>Master’s Degree Artifact #1 | AI Lab</strong></p>
+    <details open>
+        <summary>🏀 Featured Project: Basketball Player Analysis AI Chatbot</summary>
+        <div class="content">
+            <p>Master’s Degree Artifact #1 | AI Lab</p>
 
-                    <h3 style="margin-top: 25px;">🔍 Project Narrative</h3>
-                    <p>I am heavily involved in basketball coaching at the high school and college level, and I wanted to solve the “information overload” in scouting. This project is a digital twin of my scouting reports and methodology. This is an AI analyst that turns raw data into actual game plans.</p>
+            <h3>🔍 Project Narrative</h3>
+            <p>I am heavily involved in basketball coaching at the high school and college level, and I wanted to solve the “information overload” in scouting. This project is a digital twin of my scouting reports and methodology. This is an AI analyst that turns raw data into actual game plans.</p>
 
-                    <h3 style="margin-top: 25px;">🛠️ Technical Implementation</h3>
+            <h3>🛠️ Technical Implementation</h3>
+            <ul>
+                <li><strong>Platform:</strong> Chatbase (LLM Integration)</li>
+                <li><strong>Logic Calibration:</strong> Grounded the model in my proprietary scouting methodology with a <strong>low temperature setting</strong> to prioritize accuracy and factual consistency over creative generation.</li>
+                <li><strong>Instructional Architecture:</strong> Engineered a <strong>Dual-Mode System</strong> to resolve initial behavioral “drifts”:
                     <ul>
-                        <li><strong>Platform:</strong> Chatbase (LLM Integration)</li>
-                        <li><strong>Logic Calibration:</strong> Grounded the model in my proprietary scouting methodology with a <strong>low temperature setting</strong> to prioritize accuracy and factual consistency over creative generation.</li>
-                        <li><strong>Instructional Architecture:</strong> Engineered a <strong>Dual-Mode System</strong> to resolve initial behavioral “drifts”:
-                            <ul>
-                                <li><strong>Keyword: SCOUT</strong> – Triggers an aggressive tactical mode to hunt for opponent weaknesses.</li>
-                                <li><strong>Keyword: AUDIT</strong> – Triggers an internal focus on player development and training.</li>
-                            </ul>
-                        </li>
+                        <li><strong>Keyword: SCOUT</strong> – Triggers an aggressive tactical mode to hunt for opponent weaknesses.</li>
+                        <li><strong>Keyword: AUDIT</strong> – Triggers an internal focus on player development and training.</li>
                     </ul>
+                </li>
+            </ul>
 
-                    <h3 style="margin-top: 25px;">📊 System Previews</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p><strong>Scout Mode:</strong></p>
-                            <img src="./Chatbox%20Scout%20Preview.png" class="project-img" alt="Scout Mode">
-                        </div>
-                        <div class="col-md-6">
-                            <p><strong>Audit Mode:</strong></p>
-                            <img src="./Chatbox%20Audit%20Preview.png" class="project-img" alt="Audit Mode">
-                        </div>
-                    </div>
+            <h3>📊 System Previews</h3>
+            <p><strong>Scout Mode:</strong></p>
+            <img src="./Chatbox%20Scout%20Preview.png" class="project-img">
+            
+            <p style="margin-top: 20px;"><strong>Audit Mode:</strong></p>
+            <img src="./Chatbox%20Audit%20Preview.png" class="project-img">
 
-                    <div class="mt-4 pt-3 border-top">
-                        <p><strong>Link:</strong> <a href="https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd" target="_blank">Interact with the Basketball AI Chatbot</a></p>
-                    </div>
-
-                </div>
-            </div>
+            <p style="margin-top: 24px; border-top: 1px solid #d0d7de; padding-top: 16px;">
+                <strong>Link:</strong> <a href="https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd" style="color: #0969da; text-decoration: none;">Interact with the Basketball AI Chatbot</a>
+            </p>
         </div>
+    </details>
 
-        <div class="accordion-item" style="opacity: 0.6;">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" disabled>
-                    🔒 Artifact #2: Coming Soon
-                </button>
-            </h2>
+    <details>
+        <summary>🔒 Artifact #2: Coming Soon</summary>
+        <div class="content">
+            <p>Next project details will be posted here.</p>
         </div>
+    </details>
 
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
