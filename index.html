@@ -1,70 +1,83 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en-us">
+  <head>
     <meta charset="UTF-8">
-    <title>Brianna Gliesmann Portfolio</title>
+    <title>Brianna Gliesmann | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: #24292f; margin: 40px auto; max-width: 900px; padding: 0 20px; }
-        h1 { color: #0969da; font-size: 32px; border-bottom: 1px solid #d0d7de; padding-bottom: 8px; }
-        h2 { font-size: 24px; font-weight: 600; margin-top: 24px; margin-bottom: 16px; border-bottom: 1px solid #d0d7de; padding-bottom: 8px; }
-        h3 { font-size: 20px; font-weight: 600; margin-top: 24px; margin-bottom: 16px; }
-        p { margin-top: 0; margin-bottom: 16px; line-height: 1.5; }
-        ul { padding-left: 2em; margin-top: 0; margin-bottom: 16px; }
-        li { margin-bottom: 0.25em; }
-        .project-img { width: 100%; border-radius: 6px; border: 1px solid #d0d7de; margin-top: 10px; }
-        
-        /* The Clickable Part */
-        details { border: 1px solid #d0d7de; border-radius: 6px; margin-bottom: 16px; }
-        summary { padding: 16px; font-size: 20px; font-weight: 600; cursor: pointer; list-style: none; background-color: #f6f8fa; }
-        summary::-webkit-details-marker { display: none; }
-        details[open] summary { border-bottom: 1px solid #d0d7de; }
-        .content { padding: 16px 32px; }
+      body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
+      .markdown-body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
+      
+      /* Header Styling */
+      .page-header { color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); padding: 5rem 6rem; margin-bottom: 2rem; border-radius: 6px; }
+      .project-name { font-size: 3.25rem; margin-top: 0; margin-bottom: 0.1rem; }
+      .project-tagline { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.7; }
+
+      /* The Clickable/Accordion Logic */
+      details { border: 1px solid #d0d7de; border-radius: 6px; margin-bottom: 1.5rem; background: #fff; }
+      summary { padding: 1rem; font-size: 1.5rem; font-weight: 600; cursor: pointer; list-style: none; background: #f6f8fa; color: #0969da; }
+      summary:hover { background: #ebf0f4; }
+      .content { padding: 2rem; border-top: 1px solid #d0d7de; }
+      .img-container { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+      .img-container div { flex: 1; min-width: 300px; }
+      img { width: 100%; border-radius: 6px; border: 1px solid #d0d7de; }
     </style>
-</head>
-<body>
+  </head>
+  <body>
 
-    <h1>Brianna Gliesmann</h1>
-    <p style="font-size: 26px; font-weight: 400; margin-top: 20px;">[Brianna Gliesmann] | AI Data Analytics Portfolio</p>
+    <header class="page-header">
+      <h1 class="project-name">Brianna Gliesmann</h1>
+      <h2 class="project-tagline">AI Data Analytics | Master's Portfolio</h2>
+    </header>
 
-    <details open>
-        <summary>🏀 Featured Project: Basketball Player Analysis AI Chatbot</summary>
+    <main class="markdown-body">
+      
+      <details open>
+        <summary>🏀 Artifact #1: Basketball Player Analysis AI Chatbot</summary>
         <div class="content">
-            <p>Master’s Degree Artifact #1 | AI Lab</p>
+          <p><strong>Master’s Degree Artifact #1 | AI Lab</strong></p>
 
-            <h3>🔍 Project Narrative</h3>
-            <p>I am heavily involved in basketball coaching at the high school and college level, and I wanted to solve the “information overload” in scouting. This project is a digital twin of my scouting reports and methodology. This is an AI analyst that turns raw data into actual game plans.</p>
+          <h3>🔍 Project Narrative</h3>
+          <p>I am heavily involved in basketball coaching at the high school and college level. My goal was to solve the “information overload” in scouting by building a digital twin of my scouting reports and methodology. This is an AI analyst that turns raw data into actual game plans.</p>
 
-            <h3>🛠️ Technical Implementation</h3>
-            <ul>
-                <li><strong>Platform:</strong> Chatbase (LLM Integration)</li>
-                <li><strong>Logic Calibration:</strong> Grounded the model in my proprietary scouting methodology with a <strong>low temperature setting</strong> to prioritize accuracy and factual consistency over creative generation.</li>
-                <li><strong>Instructional Architecture:</strong> Engineered a <strong>Dual-Mode System</strong> to resolve initial behavioral “drifts”:
-                    <ul>
-                        <li><strong>Keyword: SCOUT</strong> – Triggers an aggressive tactical mode to hunt for opponent weaknesses.</li>
-                        <li><strong>Keyword: AUDIT</strong> – Triggers an internal focus on player development and training.</li>
-                    </ul>
-                </li>
-            </ul>
+          <h3>🛠️ Technical Implementation</h3>
+          <ul>
+            <li><strong>Platform:</strong> Chatbase (LLM Integration)</li>
+            <li><strong>Logic Calibration:</strong> Grounded the model in my proprietary scouting methodology with a <strong>low temperature setting</strong> to prioritize accuracy and factual consistency over creative generation.</li>
+            <li><strong>Instructional Architecture:</strong> Engineered a <strong>Dual-Mode System</strong> to resolve initial behavioral “drifts”:
+              <ul>
+                <li><strong>Keyword: SCOUT</strong> – Triggers an aggressive tactical mode to hunt for opponent weaknesses.</li>
+                <li><strong>Keyword: AUDIT</strong> – Triggers an internal focus on player development and training.</li>
+              </ul>
+            </li>
+          </ul>
 
-            <h3>📊 System Previews</h3>
-            <p><strong>Scout Mode:</strong></p>
-            <img src="./Chatbox%20Scout%20Preview.png" class="project-img">
-            
-            <p style="margin-top: 20px;"><strong>Audit Mode:</strong></p>
-            <img src="./Chatbox%20Audit%20Preview.png" class="project-img">
+          <h3>📊 System Previews</h3>
+          <div class="img-container">
+            <div>
+              <p><strong>Scout Mode:</strong></p>
+              <img src="./Chatbox%20Scout%20Preview.png" alt="Scout Mode">
+            </div>
+            <div>
+              <p><strong>Audit Mode:</strong></p>
+              <img src="./Chatbox%20Audit%20Preview.png" alt="Audit Mode">
+            </div>
+          </div>
 
-            <p style="margin-top: 24px; border-top: 1px solid #d0d7de; padding-top: 16px;">
-                <strong>Link:</strong> <a href="https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd" style="color: #0969da; text-decoration: none;">Interact with the Basketball AI Chatbot</a>
-            </p>
+          <footer style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+            <p><strong>Link:</strong> <a href="https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd" target="_blank">Interact with the Basketball AI Chatbot →</a></p>
+          </footer>
         </div>
-    </details>
+      </details>
 
-    <details>
+      <details>
         <summary>🔒 Artifact #2: Coming Soon</summary>
         <div class="content">
-            <p>Next project details will be posted here.</p>
+          <p>The next project for the MS in Data Analytics program will be documented here.</p>
         </div>
-    </details>
+      </details>
 
-</body>
+    </main>
+  </body>
 </html>
