@@ -8,27 +8,26 @@
     <style>
       body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 0; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; background-color: #f6f8fa; }
       
-      /* Formal Professional Header */
       .page-header { color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); padding: 5rem 6rem; margin-bottom: 2rem; }
       .project-name { font-size: 3.25rem; margin-top: 0; margin-bottom: 0.1rem; color: white; font-weight: bold; }
       .project-tagline { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.8; color: white; }
 
-      /* Container for the content */
       .markdown-body { box-sizing: border-box; background-color: #fff; padding: 45px; border: 1px solid #d0d7de; border-radius: 6px; margin: 20px; }
 
-      /* Clickable Accordion Styling */
-      details { border: 1px solid #d0d7de; border-radius: 6px; margin-bottom: 1.5rem; background: #fff; transition: 0.3s; }
+      details { border: 1px solid #d0d7de; border-radius: 6px; margin-bottom: 1.5rem; background: #fff; }
       summary { padding: 1.2rem; font-size: 1.6rem; font-weight: 600; cursor: pointer; list-style: none; background: #f6f8fa; color: #0969da; border-radius: 6px; }
       summary:hover { background: #ebf0f4; }
       details[open] summary { border-bottom: 1px solid #d0d7de; border-radius: 6px 6px 0 0; }
       
       .inner-content { padding: 2rem; }
-      .img-container { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
-      .img-container div { flex: 1; min-width: 300px; }
-      img { width: 100%; border-radius: 8px; border: 1px solid #d0d7de; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+      
+      /* Updated Image Styling for Large Previews */
+      .img-preview-block { margin-top: 30px; margin-bottom: 30px; text-align: center; }
+      .img-preview-block p { font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; color: #24292f; }
+      img { width: 100%; max-width: 850px; border-radius: 8px; border: 1px solid #d0d7de; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 20px; }
       
       .breakthrough-box { background-color: #fffbdd; border-left: 5px solid #d4a017; padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-      .btn-link { display: inline-block; background: #0969da; color: white !important; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+      .btn-link { display: inline-block; background: #0969da; color: white !important; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 15px; font-size: 1.1rem; }
       .btn-link:hover { background: #0550ae; }
     </style>
   </head>
@@ -59,7 +58,7 @@
           <ul>
             <li><strong>Platform:</strong> Chatbase (LLM Integration)</li>
             <li><strong>Logic Calibration:</strong> Grounded the model in my proprietary scouting methodology with a <strong>low temperature setting</strong> to prioritize accuracy and factual consistency over creative generation.</li>
-            <li><strong>Instructional Architecture:</strong> Engineered a <strong>Dual-Mode System</strong> to resolve initial behavioral “drifts”:
+            <li><strong>Instructional Architecture:</strong> Engineered a <strong>Dual-Mode System</strong>:
               <ul>
                 <li><strong>Keyword: SCOUT</strong> – Triggers an aggressive tactical mode to hunt for opponent weaknesses.</li>
                 <li><strong>Keyword: AUDIT</strong> – Triggers an internal focus on player development and training.</li>
@@ -68,15 +67,12 @@
           </ul>
 
           <h3>📊 System Previews</h3>
-          <div class="img-container">
-            <div>
-              <p><strong>Scout Mode:</strong></p>
-              <img src="./Chatbox%20Scout%20Preview.png" alt="Scout Mode Preview">
-            </div>
-            <div>
-              <p><strong>Audit Mode:</strong></p>
-              <img src="./Chatbox%20Audit%20Preview.png" alt="Audit Mode Preview">
-            </div>
+          <div class="img-preview-block">
+            <p>Scout Mode: Tactical Analysis</p>
+            <img src="./Chatbox%20Scout%20Preview.png" alt="Scout Mode Large Preview">
+            
+            <p style="margin-top: 40px;">Audit Mode: Player Development</p>
+            <img src="./Chatbox%20Audit%20Preview.png" alt="Audit Mode Large Preview">
           </div>
 
           <div style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; text-align: center;">
