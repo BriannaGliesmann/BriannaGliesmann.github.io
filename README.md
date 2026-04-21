@@ -14,7 +14,7 @@ I am heavily involved in basketball coaching at the high school and college leve
     * **Keyword: AUDIT** – Triggers an internal focus on player development and training.
     
 ### 📊 System Previews
-
+---
 **Scout Mode:**
 ![Scout Preview](./Chatbox%20Scout%20Preview.png)
 
