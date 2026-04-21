@@ -6,40 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
     <style>
-      body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
-      .markdown-body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; }
+      body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 0; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; background-color: #f6f8fa; }
       
-      /* Header Styling */
-      .page-header { color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); padding: 5rem 6rem; margin-bottom: 2rem; border-radius: 6px; }
-      .project-name { font-size: 3.25rem; margin-top: 0; margin-bottom: 0.1rem; }
-      .project-tagline { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.7; }
+      /* Formal Professional Header */
+      .page-header { color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); padding: 5rem 6rem; margin-bottom: 2rem; }
+      .project-name { font-size: 3.25rem; margin-top: 0; margin-bottom: 0.1rem; color: white; font-weight: bold; }
+      .project-tagline { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.8; color: white; }
 
-      /* The Clickable/Accordion Logic */
-      details { border: 1px solid #d0d7de; border-radius: 6px; margin-bottom: 1.5rem; background: #fff; }
-      summary { padding: 1rem; font-size: 1.5rem; font-weight: 600; cursor: pointer; list-style: none; background: #f6f8fa; color: #0969da; }
+      /* Container for the content */
+      .markdown-body { box-sizing: border-box; background-color: #fff; padding: 45px; border: 1px solid #d0d7de; border-radius: 6px; margin: 20px; }
+
+      /* Clickable Accordion Styling */
+      details { border: 1px solid #d0d7de; border-radius: 6px; margin-bottom: 1.5rem; background: #fff; transition: 0.3s; }
+      summary { padding: 1.2rem; font-size: 1.6rem; font-weight: 600; cursor: pointer; list-style: none; background: #f6f8fa; color: #0969da; border-radius: 6px; }
       summary:hover { background: #ebf0f4; }
-      .content { padding: 2rem; border-top: 1px solid #d0d7de; }
+      details[open] summary { border-bottom: 1px solid #d0d7de; border-radius: 6px 6px 0 0; }
+      
+      .inner-content { padding: 2rem; }
       .img-container { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
       .img-container div { flex: 1; min-width: 300px; }
-      img { width: 100%; border-radius: 6px; border: 1px solid #d0d7de; }
+      img { width: 100%; border-radius: 8px; border: 1px solid #d0d7de; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+      
+      .breakthrough-box { background-color: #fffbdd; border-left: 5px solid #d4a017; padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+      .btn-link { display: inline-block; background: #0969da; color: white !important; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+      .btn-link:hover { background: #0550ae; }
     </style>
   </head>
   <body>
 
     <header class="page-header">
       <h1 class="project-name">Brianna Gliesmann</h1>
-      <h2 class="project-tagline">AI Data Analytics | Master's Portfolio</h2>
+      <h2 class="project-tagline">AI Data Analytics | Master's Degree Portfolio</h2>
     </header>
 
     <main class="markdown-body">
       
       <details open>
         <summary>🏀 Artifact #1: Basketball Player Analysis AI Chatbot</summary>
-        <div class="content">
+        <div class="inner-content">
           <p><strong>Master’s Degree Artifact #1 | AI Lab</strong></p>
 
-          <h3>🔍 Project Narrative</h3>
-          <p>I am heavily involved in basketball coaching at the high school and college level. My goal was to solve the “information overload” in scouting by building a digital twin of my scouting reports and methodology. This is an AI analyst that turns raw data into actual game plans.</p>
+          <h3>🔍 Project Narrative & Goal</h3>
+          <p>I am heavily involved in basketball coaching at the high school and college level, and I wanted to solve the “information overload” in scouting. This project is a digital twin of my scouting reports and methodology. This is an AI analyst that turns raw data into actual game plans.</p>
+
+          <div class="breakthrough-box">
+            <h3>💡 The Breakthrough</h3>
+            <p>The biggest challenge was shifting the AI from a “trainer” mindset to a “scout” mindset. Initially, even when I asked it to scout an opponent, it would suggest ways for them to improve. <strong>I solved this by engineering a dual-mode system with strict instructional triggers.</strong></p>
+            <p>It took some trial and error with the instructions and a few <strong>"nuclear updates"</strong> to the logic, but it now switches gears perfectly. This process allowed me to use my technical and conceptual skills to create a tool that makes the scouting process faster and more precise.</p>
+          </div>
 
           <h3>🛠️ Technical Implementation</h3>
           <ul>
@@ -57,27 +71,31 @@
           <div class="img-container">
             <div>
               <p><strong>Scout Mode:</strong></p>
-              <img src="./Chatbox%20Scout%20Preview.png" alt="Scout Mode">
+              <img src="./Chatbox%20Scout%20Preview.png" alt="Scout Mode Preview">
             </div>
             <div>
               <p><strong>Audit Mode:</strong></p>
-              <img src="./Chatbox%20Audit%20Preview.png" alt="Audit Mode">
+              <img src="./Chatbox%20Audit%20Preview.png" alt="Audit Mode Preview">
             </div>
           </div>
 
-          <footer style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
-            <p><strong>Link:</strong> <a href="https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd" target="_blank">Interact with the Basketball AI Chatbot →</a></p>
-          </footer>
+          <div style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; text-align: center;">
+            <a href="https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd" target="_blank" class="btn-link">Launch Live Basketball AI Chatbot →</a>
+          </div>
         </div>
       </details>
 
       <details>
-        <summary>🔒 Artifact #2: Coming Soon</summary>
-        <div class="content">
-          <p>The next project for the MS in Data Analytics program will be documented here.</p>
+        <summary>🔒 Artifact #2: Project in Progress</summary>
+        <div class="inner-content">
+          <p>The next artifact for the MS in Data Analytics program will be documented here upon completion.</p>
         </div>
       </details>
 
     </main>
+
+    <footer style="text-align: center; padding: 40px; color: #6e7781; font-size: 0.9rem;">
+        &copy; 2026 Brianna Gliesmann | MS in Data Analytics Portfolio
+    </footer>
   </body>
 </html>
