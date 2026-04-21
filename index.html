@@ -8,11 +8,11 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333; }
         .hero { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 100px 0; }
-        .card { border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .card { border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .accordion-button:not(.collapsed) { background-color: #e0e7ff; color: #1e3a8a; }
-        .accordion-button { border-radius: 15px !important; }
-        .project-img { border-radius: 10px; width: 100%; height: auto; border: 1px solid #eee; margin-bottom: 10px; }
-        .badge-custom { background-color: #e0e7ff; color: #4338ca; border-radius: 20px; padding: 5px 15px; font-size: 0.8rem; }
+        .accordion-button { border-radius: 15px !important; transition: 0.3s; }
+        .project-img { border-radius: 10px; width: 100%; height: auto; border: 1px solid #eee; margin-bottom: 15px; }
+        .section-title { color: #1e3a8a; font-weight: bold; margin-top: 20px; border-left: 4px solid #3b82f6; padding-left: 10px; }
     </style>
 </head>
 <body>
@@ -20,16 +20,11 @@
     <header class="hero text-center">
         <div class="container">
             <h1 class="display-3 fw-bold">Brianna Gliesmann</h1>
-            <p class="lead italic">AI Data Analytics | Master's Candidate</p>
-            <div class="mt-4">
-                <a href="#projects" class="btn btn-outline-light btn-lg">View Artifacts</a>
-            </div>
+            <p class="lead">AI Data Analytics | Master's Portfolio</p>
         </div>
     </header>
 
     <section id="projects" class="container py-5">
-        <h2 class="text-center mb-5 fw-bold text-dark">Master's Portfolio</h2>
-        
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
                 
@@ -37,52 +32,56 @@
                     
                     <div class="accordion-item mb-4 card">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button collapsed fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <button class="accordion-button fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
                                 🏀 Artifact #1: Basketball Player Analysis AI Chatbot
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#portfolioAccordion">
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                             <div class="accordion-body p-4">
-                                <div class="row align-items-center">
-                                    <div class="col-md-6">
-                                        <span class="badge-custom mb-2 d-inline-block">AI Lab Project</span>
-                                        <h5 class="fw-bold">Project Overview</h5>
-                                        <p class="text-muted">A digital twin for basketball scouting that uses dual-mode logic (SCOUT vs. AUDIT) to turn raw data into actionable game plans. This tool eliminates information overload by grounding AI in specific coaching methodologies.</p>
+                                
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <h5 class="section-title">Project Narrative</h5>
+                                        <p>As a coach at the high school and college level, I built this digital twin to cut through scouting information overload. I grounded the model in my own "Gold Standard" methodology so the AI follows my specific thought processes for player evaluation.</p>
                                         
-                                        <h5 class="fw-bold mt-3">Technical Specs</h5>
-                                        <div class="mb-3">
-                                            <span class="badge bg-dark">Chatbase</span>
-                                            <span class="badge bg-dark">Prompt Engineering</span>
-                                            <span class="badge bg-dark">Low-Temp Calibration</span>
+                                        <h5 class="section-title">The Challenge & Breakthrough</h5>
+                                        <p>The biggest challenge was shifting the AI from a "trainer" mindset to a "scout" mindset. Initially, it would suggest improvements when I needed it to hunt weaknesses. I solved this by engineering a **dual-mode system** with strict instructions:</p>
+                                        <ul>
+                                            <li><strong>Keyword: SCOUT</strong> – Pivots the AI to hunt for tactical advantages and opponent weaknesses.</li>
+                                            <li><strong>Keyword: AUDIT</strong> – Shifts focus to internal player development and training needs.</li>
+                                        </ul>
+                                        
+                                        <h5 class="section-title">Technical Strategy</h5>
+                                        <p>I utilized <strong>Chatbase</strong> for the LLM integration, dialing the <strong>temperature setting</strong> way down to ensure the bot prioritized statistical accuracy over creativity. This ensures the scouting reports remain factual and precise.</p>
+                                        
+                                        <div class="mt-4">
+                                            <a href="https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd" target="_blank" class="btn btn-primary">Try the Chatbot Interface</a>
                                         </div>
-                                        
-                                        <a href="https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd" target="_blank" class="btn btn-primary">Launch Live Chatbot</a>
                                     </div>
-                                    <div class="col-md-6 mt-4 mt-md-0">
-                                        <p class="small fw-bold text-center text-uppercase text-muted">System Previews</p>
-                                        <img src="./Chatbox%20Scout%20Preview.png" class="project-img shadow-sm" alt="Scout Mode">
-                                        <img src="./Chatbox%20Audit%20Preview.png" class="project-img shadow-sm" alt="Audit Mode">
+                                    
+                                    <div class="col-lg-5 mt-4 mt-lg-0">
+                                        <p class="small fw-bold text-muted text-center uppercase">System Logic Previews</p>
+                                        <div class="p-2 border rounded bg-white">
+                                            <label class="badge bg-primary mb-2">Scout Mode</label>
+                                            <img src="./Chatbox%20Scout%20Preview.png" class="project-img shadow-sm" alt="Scout Mode">
+                                            
+                                            <label class="badge bg-secondary mb-2">Audit Mode</label>
+                                            <img src="./Chatbox%20Audit%20Preview.png" class="project-img shadow-sm" alt="Audit Mode">
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
 
-                    <div class="accordion-item mb-4 card opacity-50">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" disabled style="background: #f1f1f1; cursor: not-allowed;">
-                                🔒 Artifact #2: Coming Soon
-                            </button>
-                        </h2>
-                    </div>
-
-                </div></div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="text-center py-5 text-muted">
-        <hr class="w-25 mx-auto">
-        <p>&copy; 2026 Brianna Gliesmann</p>
+        <p>&copy; 2026 Brianna Gliesmann | Master of Science in Data Analytics</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
