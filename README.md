@@ -12,7 +12,9 @@ I am heavily involved in basketball coaching at the high school and college leve
 * **Instructional Architecture:** Engineered a **Dual-Mode System** to resolve initial behavioral "drifts":
     * **Keyword: SCOUT** – Triggers an aggressive tactical mode to hunt for opponent weaknesses.
     * **Keyword: AUDIT** – Triggers an internal focus on player development and training.
+    
 ### 📊 System Previews
+
 **Scout Mode:**
 ![Scout Preview](./Chatbox%20Scout%20Preview.png)
 
