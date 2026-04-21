@@ -5,7 +5,7 @@
 
 ### 🔍 Project Narrative
 I am heavily involved in basketball coaching at the high school and college level, and I wanted to solve the "information overload" in scouting. This project is a digital twin of my scouting reports and methodology. This is an AI analyst that turns raw data into actual game plans. 
----
+
 ### 🛠️ Technical Implementation
 * **Platform:** Chatbase (LLM Integration)
 * **Logic Calibration:** Grounded the model in my proprietary scouting methodology with a **low temperature setting** to prioritize accuracy and factual consistency over creative generation.
@@ -14,16 +14,16 @@ I am heavily involved in basketball coaching at the high school and college leve
     * **Keyword: AUDIT** – Triggers an internal focus on player development and training.
     
 ### 📊 System Previews
----
+
 **Scout Mode:**
 ![Scout Preview](./Chatbox%20Scout%20Preview.png)
 
 **Audit Mode:**
 ![Audit Preview](./Chatbox%20Audit%20Preview.png)
----
+
 ### 💡 The Breakthrough
 The biggest challenge was shifting the AI from a "trainer" mindset to a "scout" mindset. Through iterative prompting and "nuclear updates" to the logic, I successfully built a tool that switches gears based on specific coaching needs, making the scouting process significantly faster and more precise.
----
+
 ### 📂 Technical Artifacts
 * **Live AI Interface:** [Interact with the Scouting AI](https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd)
 * **Methodology Overview:** Grounded in a custom Gold Standard for player evaluation.
