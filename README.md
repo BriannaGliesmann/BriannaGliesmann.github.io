@@ -1,19 +1,21 @@
 # [Brianna Gliesmann] | AI Data Analytics Portfolio
 
 ## 🏀 Featured Project: Basketball Player Analysis AI Chatbot
-**Master’s Degree Artifact #1**
+**Master’s Degree Artifact #1 | AI Lab**
 
-### 🔍 Project Overview
-**The Goal:** This project focuses on bridging the gap between complex basketball sports analytics and end-users. I developed a specialized AI chatbot designed to ingest basketball player data and provide instant, conversational analysis to help coaches and scouts evaluate player performance.
+### 🔍 Project Narrative
+I am heavily involved in basketball coaching at the high school and college level, and I wanted to solve the "information overload" in scouting. This project is a digital twin of my scouting reports and methodology. This is an AI analyst that turns raw data into actual game plans. 
 
-### 🛠️ Tools & Technologies
+### 🛠️ Technical Implementation
 * **Platform:** Chatbase (LLM Integration)
-* **Data Focus:** Basketball Player Metrics & Scouting Reports
-* **Deployment:** Integrated Web Interface
+* **Logic Calibration:** Grounded the model in my proprietary scouting methodology with a **low temperature setting** to prioritize accuracy and factual consistency over creative generation.
+* **Instructional Architecture:** Engineered a **Dual-Mode System** to resolve initial behavioral "drifts":
+    * **Keyword: SCOUT** – Triggers an aggressive tactical mode to hunt for opponent weaknesses.
+    * **Keyword: AUDIT** – Triggers an internal focus on player development and training.
 
-### 💡 Key Findings & Insights
-* **Accessibility:** Custom-trained AI models can translate raw statistical datasets into actionable scouting insights without requiring the user to write SQL or complex queries.
-* **Efficiency:** Automated data retrieval through a chatbot interface significantly reduces the time required for "on-the-fly" player evaluation compared to traditional spreadsheet analysis.
+### 💡 The Breakthrough
+The biggest challenge was shifting the AI from a "trainer" mindset to a "scout" mindset. Through iterative prompting and "nuclear updates" to the logic, I successfully built a tool that switches gears based on specific coaching needs, making the scouting process significantly faster and more precise.
 
-### 🔗 Project Links
-* **Live Demo:** [Interact with the Basketball AI Chatbot](https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd)
+### 📂 Technical Artifacts
+* **Live AI Interface:** [Interact with the Scouting AI](https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd)
+* **Methodology Overview:** Grounded in a custom Gold Standard for player evaluation.
