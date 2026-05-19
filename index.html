@@ -314,6 +314,38 @@
     </div>
   </div>
 </details>
+ <details>
+    <summary>Artifact 5: Clinical Laboratory Machine Learning Case Study</summary>
+    <div class="inner-content">
+        <div class="content-card">
+            <p>Master’s Degree Artifact 5 | Case Study Exploration</p>
+            
+            <h3>The Project Goal</h3>
+            <p>This project looks at integrating machine learning pipelines inside a clinical laboratory to catch mistakes before results are released. The goal is to dynamically identify pre analytical sample errors like wrong blood in a tube or fluid contamination as well as catch systematic analytical drift when a massive analyzer machine loses calibration.</p>
+
+            <h3>How It Works</h3>
+            <p>The system pulls live data straight from the LIS platform and transforms raw numbers into structured features using rolling medians, moving standard deviations, and multi analyte delta checks. They use classic machine learning and advanced ensemble models like Random Forests and Support Vector Machines, validating the models with historical data and injected synthetic errors.</p>
+
+            <h3>Real World Application</h3>
+            <p>They focus heavily on sensitivity and the false alert rate to prevent severe alarm fatigue for the laboratory staff. The model acts as an automated triage tool that clears normal samples and sends unusual flags to a human clinical validator. This puts actual laboratory logic into the data pipeline, though the heavy reliance on simulated error data means the model might struggle with chaotic real world data.</p>
+
+            <h3>My Portfolio Takeaway</h3>
+            <p>I would apply this automated triage concept in the endocrinology laboratory down the road since we use the LIS platform. It keeps things safe by helping human experts rather than acting as an isolated decision maker. However I would avoid relying only on synthetic shifts. For future projects I want to build anomaly detection models trained on completely clean true clinical baselines so the system can spot unexpected messy variations much better.</p>
+
+            <h3>Workflow Visualization</h3>
+            <div class="img-preview-block">
+                <p class="img-label">Automated Triage Machine Learning Pipeline</p>
+                <img src="./clinical-lab-triage.png" alt="Diagram showing the automated triage workflow inside a clinical laboratory information system">
+                <p>The image shows the automated triage workflow diagram that I designed to visualize how the machine learning pipeline integrates with human clinical validators in the laboratory to catch mistakes.</p>
+            </div>
+
+            <div style="border-top: 1px solid #c0c0c0; padding-top: 20px; margin-top: 40px; font-style: italic; color: #c0c0c0;">
+                <p>Tools used Gemini and Grammarly were used for text summarization, understanding, initial drafting, and editing.</p>
+                <p style="margin-top: 10px;">Reference Lorde N Mahapatra S and Kalaria T 2024. Machine Learning for Patient Based Real Time Quality Control Analytical and Preanalytical Error Detection in Clinical Laboratory. Diagnostics 14 16 1808. https//doi.org/10.3390/diagnostics14161808</p>
+            </div>
+        </div>
+    </div>
+</details>
 </main>
 
 <footer>
