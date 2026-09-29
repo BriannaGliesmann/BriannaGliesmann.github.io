@@ -1,42 +1,45 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
 <head>
     <meta charset="UTF-8">
     <title>Brianna Gliesmann | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        /* Base styles with navy and cream theme */
+        * {
+            box-sizing: border-box;
+        }
+
         body { 
-            box-sizing: border-box; 
-            min-width: 200px; 
             margin: 0; 
             padding: 0; 
-            font-family: Arial, sans-serif; 
-            background-color: #001f3f; /* Deep Navy */
-            color: #f5f5dc; /* Cream */
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #00172e; 
+            color: #f5f5dc; 
+            line-height: 1.7;
         }
         
-        /* Header styling */
         .page-header { 
             color: #f5f5dc; 
             text-align: center; 
-            padding: 4rem 2rem; 
-            background-color: #001830;
-            border-bottom: 2px solid #c0c0c0; /* Silver */
+            padding: 4rem 2rem 3rem; 
+            background: linear-gradient(180deg, #001122 0%, #00172e 100%);
+            border-bottom: 2px solid #c0c0c0;
         }
+
         .project-name { 
             font-size: 3rem; 
             margin: 0; 
             letter-spacing: 1px;
-        }
-        .project-tagline { 
-            font-size: 1.2rem; 
-            opacity: 0.8; 
-            margin-top: 15px; 
+            color: #ffffff;
         }
 
-        /* Main content containers */
+        .project-tagline { 
+            font-size: 1.25rem; 
+            opacity: 0.85; 
+            margin-top: 10px; 
+            font-weight: 300;
+        }
+
         main {
             max-width: 1000px;
             margin: 40px auto;
@@ -44,106 +47,125 @@
         }
 
         .content-card { 
-            background-color: #002a54; 
-            padding: 40px; 
-            border: 1px solid #c0c0c0; 
+            background-color: #002850; 
+            padding: 35px; 
+            border: 1px solid rgba(192, 192, 192, 0.4); 
             border-radius: 12px; 
-            margin-bottom: 40px; 
+            margin-bottom: 25px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
         }
 
-        /* Typography adjustments */
         h3 { 
             color: #ffffff; 
-            font-size: 1.8rem; 
-            margin-top: 30px;
-            border-bottom: 1px solid #c0c0c0;
-            padding-bottom: 10px;
+            font-size: 1.6rem; 
+            margin-top: 25px;
+            border-bottom: 1px solid rgba(192, 192, 192, 0.3);
+            padding-bottom: 8px;
+        }
+
+        h4 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-top: 25px;
         }
         
         p, li {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #eaeade;
         }
 
-        /* Interaction elements */
         details { 
-            margin-bottom: 2rem; 
+            margin-bottom: 1.5rem; 
         }
+
         summary { 
-            padding: 20px; 
-            font-size: 1.5rem; 
+            padding: 18px 24px; 
+            font-size: 1.35rem; 
+            font-weight: bold;
             cursor: pointer; 
-            background: #002a54; 
+            background: #002244; 
             color: #ffffff; 
-            border: 1px solid #c0c0c0;
+            border: 1px solid rgba(192, 192, 192, 0.5);
             border-radius: 8px;
             list-style: none;
+            transition: all 0.25s ease;
+        }
+
+        summary:hover {
+            background: #002e5c;
+            border-color: #c0c0c0;
         }
         
         .inner-content { 
-            padding: 20px 0; 
+            padding-top: 15px; 
         }
         
-        /* Image and block styles */
         .img-preview-block { 
-            margin: 40px 0; 
-        }
-        .img-label {
-            font-size: 1.2rem;
-            color: #c0c0c0;
-            margin-bottom: 10px;
-        }
-        img { 
-            width: 100%; 
-            border-radius: 8px; 
-            border: 1px solid #c0c0c0; 
-            margin-bottom: 40px;
-        }
-        
-        .breakthrough-box { 
-            background-color: #003366; 
-            border-left: 4px solid #c0c0c0; 
-            padding: 25px; 
             margin: 30px 0; 
         }
+
+        .img-label {
+            font-size: 1.1rem;
+            color: #c0c0c0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        img { 
+            width: 100%; 
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; 
+            border: 1px solid #c0c0c0; 
+            margin-bottom: 25px;
+        }
         
-        /* Button styling */
-        .btn-link { 
-            display: inline-block; 
-            background-color: #f5f5dc; 
-            color: #001f3f; 
-            padding: 15px 30px; 
-            border-radius: 4px; 
-            text-decoration: none; 
-            font-size: 1.1rem; 
-            transition: 0.3s;
-        }
-        .btn-link:hover { 
-            background-color: #ffffff; 
-        }
-/* Specific class for Artifact 5 images to keep them smaller */
         .artifact-image {
             display: block;
             margin: 20px auto;
-            max-width: 50%; /* Adjust this percentage to make them larger or smaller */
+            max-width: 65%; 
             height: auto;
             border-radius: 8px;
             border: 1px solid #c0c0c0;
         }
+
+        .breakthrough-box { 
+            background-color: #003366; 
+            border-left: 4px solid #c0c0c0; 
+            padding: 20px 25px; 
+            margin: 25px 0; 
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .btn-link { 
+            display: inline-block; 
+            background-color: #f5f5dc; 
+            color: #001f3f; 
+            padding: 12px 28px; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            font-size: 1.05rem; 
+            font-weight: bold;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-link:hover { 
+            background-color: #ffffff; 
+            transform: translateY(-2px);
+        }
+
         footer {
             text-align: center; 
-            padding: 40px; 
+            padding: 40px 20px; 
             color: #c0c0c0; 
             font-size: 0.9rem;
         }
 
-        /* Tooltip container */
         .tooltip {
             position: relative;
             display: inline-block;
         }
 
-        /* Tooltip text */
         .tooltip .tooltiptext {
             visibility: hidden;
             width: 220px;
@@ -183,7 +205,8 @@
     </div>
 </header>
 
-<details open>
+<main>
+    <details open>
         <summary>Professional Profile</summary>
         <div class="inner-content">
             <div class="content-card">
@@ -239,7 +262,7 @@
                     <img src="./Chatbox%20Audit%20Preview.png" alt="Audit Mode Preview">
                 </div>
 
-                <div style="text-align: center;">
+                <div style="text-align: center; margin-top: 30px;">
                     <p>Ready to see the logic in action?</p>
                     <a href="https://www.chatbase.co/chatbot-iframe/wsDAQV14eqIhzchABzBKd" target="_blank" class="btn-link">Interact with the Basketball AI Chatbot</a>
                 </div>
@@ -291,110 +314,111 @@
             </div>
         </div>
     </details>
-<details>
-  <summary>Artifact 4: Leadership and Navigating Human Bias</summary>
-  <div class="inner-content">
-    <div class="content-card">
-      <p>Master’s Degree Artifact 4 | Leadership in AI</p>
 
-      <h3>Personal Value Statement</h3>
-      <p>In the clinical lab and in basketball scouting I recognize how human bias can stand in the way of leading with peace and joy. Reminding myself of my commitment to high standards makes me want to lead differently. I believe that fostering an environment of awareness and empathy is essential to fulfilling my purpose. My core value is to promote a high level culture and environment along with inclusivity where every individual perspective is valued and every voice is heard.</p>
+    <details>
+        <summary>Artifact 4: Leadership and Navigating Human Bias</summary>
+        <div class="inner-content">
+            <div class="content-card">
+                <p>Master’s Degree Artifact 4 | Leadership in AI</p>
 
-      <div class="breakthrough-box">
-        <p><strong>Fostering Awareness and Education</strong></p>
-        <p>I will conduct regular workshops tailored to the needs of my team to help us recognize our own blind spots. I want to encourage continuous learning through resources that highlight diverse experiences. Sometimes a simple reminder is necessary to ensure we are looking at the world with fresh eyes. By providing materials that show different viewpoints I can help my team and my players build stronger relationships.</p>
-      </div>
+                <h3>Personal Value Statement</h3>
+                <p>In the clinical lab and in basketball scouting I recognize how human bias can stand in the way of leading with peace and joy. Reminding myself of my commitment to high standards makes me want to lead differently. I believe that fostering an environment of awareness and empathy is essential to fulfilling my purpose. My core value is to promote a high level culture and environment along with inclusivity where every individual perspective is valued and every voice is heard.</p>
 
-      <h3>Strategies to Address Human Bias</h3>
-      
-      <p><strong>Implement Inclusive Practices</strong></p>
-      <p>I will build diverse teams to bring multiple viewpoints into every decision. This diversity helps us identify biases that may not be apparent in a group where everyone thinks the same way. I will foster an inclusive culture by actively listening to all team members and ensuring that everyone has an opportunity to contribute.</p>
+                <div class="breakthrough-box">
+                    <p><strong>Fostering Awareness and Education</strong></p>
+                    <p>I will conduct regular workshops tailored to the needs of my team to help us recognize our own blind spots. I want to encourage continuous learning through resources that highlight diverse experiences. Sometimes a simple reminder is necessary to ensure we are looking at the world with fresh eyes. By providing materials that show different viewpoints I can help my team and my players build stronger relationships.</p>
+                </div>
 
-      <p><strong>Standardize Protocols</strong></p>
-      <p>I will regularly audit the data tools and protocols we use to check for hidden biases. This includes using fairness metrics to ensure our results remain objective. There is nothing that should stand in the way of us fulfilling our work besides our own unwillingness to improve our methods.</p>
+                <h3>Strategies to Address Human Bias</h3>
+                
+                <p><strong>Implement Inclusive Practices</strong></p>
+                <p>I will build diverse teams to bring multiple viewpoints into every decision. This diversity helps us identify biases that may not be apparent in a group where everyone thinks the same way. I will foster an inclusive culture by actively listening to all team members and ensuring that everyone has an opportunity to contribute.</p>
 
-      <p><strong>Lead by Example</strong></p>
-      <p>I will model empathy and fairness in every interaction whether I am in the clinic or on the court. I want to demonstrate a true commitment to addressing biases in my own decisions. I will promote a culture of self-reflection to create a more equitable environment for everyone.</p>
+                <p><strong>Standardize Protocols</strong></p>
+                <p>I will regularly audit the data tools and protocols we use to check for hidden biases. This includes using fairness metrics to ensure our results remain objective. There is nothing that should stand in the way of us fulfilling our work besides our own unwillingness to improve our methods.</p>
 
-      <div style="border-top: 1px solid #c0c0c0; padding-top: 20px; margin-top: 40px; font-style: italic; color: #c0c0c0;">
-        <p>Tools used Gemini and Grammarly were used for text summarization, initial drafting, and editing.</p>
-      </div>
-    </div>
-  </div>
-</details>
- <details>
-    <summary>Artifact 5: Clinical Laboratory Machine Learning Case Study</summary>
-    <div class="inner-content">
-        <div class="content-card">
-            <p>Master’s Degree Artifact 5 | Case Study Exploration</p>
-            
-            <h3>The Project Goal</h3>
-            <p>This project looks at integrating machine learning pipelines inside a clinical laboratory to catch mistakes before results are released. The goal is to dynamically identify pre analytical sample errors like wrong blood in a tube or fluid contamination as well as catch systematic analytical drift when a massive analyzer machine loses calibration.</p>
+                <p><strong>Lead by Example</strong></p>
+                <p>I will model empathy and fairness in every interaction whether I am in the clinic or on the court. I want to demonstrate a true commitment to addressing biases in my own decisions. I will promote a culture of self-reflection to create a more equitable environment for everyone.</p>
 
-            <h3>How It Works</h3>
-            <p>The system pulls live data straight from the LIS platform and transforms raw numbers into structured features using rolling medians, moving standard deviations, and multi analyte delta checks. They use classic machine learning and advanced ensemble models like Random Forests and Support Vector Machines, validating the models with historical data and injected synthetic errors.</p>
-
-            <h3>Real World Application</h3>
-            <p>They focus heavily on sensitivity and the false alert rate to prevent severe alarm fatigue for the laboratory staff. The model acts as an automated triage tool that clears normal samples and sends unusual flags to a human clinical validator. This puts actual laboratory logic into the data pipeline, though the heavy reliance on simulated error data means the model might struggle with chaotic real world data.</p>
-
-            <h3>My Portfolio Takeaway</h3>
-            <p>I would apply this automated triage concept in the endocrinology laboratory down the road since we use the LIS platform. It keeps things safe by helping human experts rather than acting as an isolated decision maker. However I would avoid relying only on synthetic shifts. For future projects I want to build anomaly detection models trained on completely clean true clinical baselines so the system can spot unexpected messy variations much better.</p>
-
-            <h3>Workflow Visualization</h3>
-            <div class="img-preview-block">
-                <p class="img-label">Automated Triage Machine Learning Pipeline</p>
-                <img src="./clinical-lab-triage.jpg" alt="Diagram showing the automated triage workflow inside a clinical laboratory information system">
-                <p>The image shows the automated triage workflow diagram that I designed to visualize how the machine learning pipeline integrates with human clinical validators in the laboratory to catch mistakes.</p>
-            </div>
-
-            <div style="border-top: 1px solid #c0c0c0; padding-top: 20px; margin-top: 40px; font-style: italic; color: #c0c0c0;">
-                <p>Tools used: Gemini and Grammarly were used for text summarization, initial drafting, and editing.</p>
-                <p style="margin-top: 10px;">Reference Lorde N Mahapatra S and Kalaria T 2024. Machine Learning for Patient Based Real Time Quality Control Analytical and Preanalytical Error Detection in Clinical Laboratory. Diagnostics 14 16 1808. https//doi.org/10.3390/diagnostics14161808</p>
+                <div style="border-top: 1px solid #c0c0c0; padding-top: 20px; margin-top: 40px; font-style: italic; color: #c0c0c0;">
+                    <p>Tools used: Gemini and Grammarly were used for text summarization, initial drafting, and editing.</p>
+                </div>
             </div>
         </div>
-    </div>
-</details>
- <details>
-    <summary>Artifact 6: Commercial Applications of AI & Operational Impact</summary>
-    <div class="inner-content">
-        <div class="content-card">
-            <h3>Strategic Analysis: AI-Driven Operational Efficiency</h3>
-            <p>This artifact examines how machine learning models move data from static logs to active, decision-making assistants across three distinct high-stakes industries.</p>
+    </details>
 
-            <h4>1. Healthcare: Reproductive Medicine</h4>
-            
-           <img src="./image_43b5e8.jpg" class="artifact-image" alt="Infographic: AI in Fertility Clinics">
-            <p>Deep learning models process time-lapse imaging to analyze millions of pixel-level morphological patterns. By standardizing embryo viability and genetic normalcy predictions, platforms like AIVF and Life Whisperer provide objective insights that cut review times by over 97%.</p>
+    <details>
+        <summary>Artifact 5: Clinical Laboratory Machine Learning Case Study</summary>
+        <div class="inner-content">
+            <div class="content-card">
+                <p>Master’s Degree Artifact 5 | Case Study Exploration</p>
+                
+                <h3>The Project Goal</h3>
+                <p>This project looks at integrating machine learning pipelines inside a clinical laboratory to catch mistakes before results are released. The goal is to dynamically identify pre analytical sample errors like wrong blood in a tube or fluid contamination as well as catch systematic analytical drift when a massive analyzer machine loses calibration.</p>
 
-            <h4>2. Sports Analytics: Basketball Operations</h4>
-            
-            <img src="./image_43b603.jpg" class="artifact-image" alt="Infographic: AI in Basketball Analytics">
-            <p>Continuous computer vision pipelines ingest raw game film to classify player movement, shot selection, and rotation effectiveness. This eliminates manual film-splicing workflows, allowing coaching staffs to focus on data-backed game plans. This can cut manual study time by roughly 70%.</p>
+                <h3>How It Works</h3>
+                <p>The system pulls live data straight from the LIS platform and transforms raw numbers into structured features using rolling medians, moving standard deviations, and multi analyte delta checks. They use classic machine learning and advanced ensemble models like Random Forests and Support Vector Machines, validating the models with historical data and injected synthetic errors.</p>
 
-            <h4>3. Property Management: Financial Compliance</h4>
-            
-            <img src="./image_43b609.jpg" class="artifact-image" alt="Infographic: AI in Property Management and Finance">
-            <p>Autonomous agents handle complex multi-entity bank reconciliations and invoice auditing. By cross-referencing vendor data against contract terms, platforms like Vic.ai and Re-Leased achieve 99% accuracy, transforming weeks of manual auditing into hours of automated oversight.</p>
+                <h3>Real World Application</h3>
+                <p>They focus heavily on sensitivity and the false alert rate to prevent severe alarm fatigue for the laboratory staff. The model acts as an automated triage tool that clears normal samples and sends unusual flags to a human clinical validator. This puts actual laboratory logic into the data pipeline, though the heavy reliance on simulated error data means the model might struggle with chaotic real world data.</p>
 
-            <h3>Operational Impact and Future Potential</h3>
-            <p>The core benefit across all three domains is the removal of human bias and the scaling of operations without proportional staff increases. The next evolution involves moving from <strong>descriptive tracking</strong> (what happened) to <strong>predictive simulation</strong> (what will happen).</p>
-            <ul>
-                <li><strong>Healthcare:</strong> Transitioning from simple viability scores to personalized patient treatment simulations.</li>
-                <li><strong>Sports:</strong> Running thousands of game simulations to test lineup efficacy against specific opponent habits before the game begins.</li>
-                <li><strong>Property Management:</strong> Using local weather patterns, wear-and-tear data, and expense histories to predict and schedule system maintenance <em>before</em> any failure occurs.</li>
-            </ul>
+                <h3>My Portfolio Takeaway</h3>
+                <p>I would apply this automated triage concept in the endocrinology laboratory down the road since we use the LIS platform. It keeps things safe by helping human experts rather than acting as an isolated decision maker. However I would avoid relying only on synthetic shifts. For future projects I want to build anomaly detection models trained on completely clean true clinical baselines so the system can spot unexpected messy variations much better.</p>
 
-            <h3>My Portfolio Takeaway</h3>
-            <p>Whether in a fertility lab, a film room, or a corporate finance office, the pattern is consistent: AI identifies subtle, high-value indicators that the human eye misses. My focus is on designing systems that act as an <strong>"efficiency multiplier,"</strong> freeing specialists to focus on high-level strategy rather than routine data management.</p>
-       <div style="border-top: 1px solid #c0c0c0; padding-top: 20px; margin-top: 30px; font-style: italic; color: #c0c0c0; font-size: 0.85rem;">
-                <p><strong>References:</strong></p>
-                <p>AIVF Ltd. (2026). <em>Next generation IVF: Clinical validation and platform efficiency metrics for the EMA™ software layer.</em> AIVF Research.</p>
-                <p>McKinsey & Company. (2026). <em>How agentic AI can reshape real estate's operating model.</em> McKinsey & Company Real Estate Insights.</p>
-                <p>SportsVisio. (2026). <em>SV Coach computer vision tracking pipeline and automated shot signature taxonomy.</em> SportsVisio Technical Documentation.</p>
+                <h3>Workflow Visualization</h3>
+                <div class="img-preview-block">
+                    <p class="img-label">Automated Triage Machine Learning Pipeline</p>
+                    <img src="./clinical-lab-triage.jpg" alt="Diagram showing the automated triage workflow inside a clinical laboratory information system">
+                    <p>The image shows the automated triage workflow diagram that I designed to visualize how the machine learning pipeline integrates with human clinical validators in the laboratory to catch mistakes.</p>
+                </div>
+
+                <div style="border-top: 1px solid #c0c0c0; padding-top: 20px; margin-top: 40px; font-style: italic; color: #c0c0c0;">
+                    <p>Tools used: Gemini and Grammarly were used for text summarization, initial drafting, and editing.</p>
+                    <p style="margin-top: 10px;">Reference: Lorde N, Mahapatra S, and Kalaria T, 2024. Machine Learning for Patient Based Real Time Quality Control Analytical and Preanalytical Error Detection in Clinical Laboratory. Diagnostics 14(16), 1808.</p>
+                </div>
             </div>
         </div>
-    </div>
-</details>
+    </details>
+
+    <details>
+        <summary>Artifact 6: Commercial Applications of AI & Operational Impact</summary>
+        <div class="inner-content">
+            <div class="content-card">
+                <h3>Strategic Analysis: AI-Driven Operational Efficiency</h3>
+                <p>This artifact examines how machine learning models move data from static logs to active, decision-making assistants across three distinct high-stakes industries.</p>
+
+                <h4>1. Healthcare: Reproductive Medicine</h4>
+                <img src="./image_43b5e8.jpg" class="artifact-image" alt="Infographic: AI in Fertility Clinics">
+                <p>Deep learning models process time-lapse imaging to analyze millions of pixel-level morphological patterns. By standardizing embryo viability and genetic normalcy predictions, platforms like AIVF and Life Whisperer provide objective insights that cut review times by over 97%.</p>
+
+                <h4>2. Sports Analytics: Basketball Operations</h4>
+                <img src="./image_43b603.jpg" class="artifact-image" alt="Infographic: AI in Basketball Analytics">
+                <p>Continuous computer vision pipelines ingest raw game film to classify player movement, shot selection, and rotation effectiveness. This eliminates manual film-splicing workflows, allowing coaching staffs to focus on data-backed game plans. This can cut manual study time by roughly 70%.</p>
+
+                <h4>3. Property Management: Financial Compliance</h4>
+                <img src="./image_43b609.jpg" class="artifact-image" alt="Infographic: AI in Property Management and Finance">
+                <p>Autonomous agents handle complex multi-entity bank reconciliations and invoice auditing. By cross-referencing vendor data against contract terms, platforms like Vic.ai and Re-Leased achieve 99% accuracy, transforming weeks of manual auditing into hours of automated oversight.</p>
+
+                <h3>Operational Impact and Future Potential</h3>
+                <p>The core benefit across all three domains is the removal of human bias and the scaling of operations without proportional staff increases. The next evolution involves moving from <strong>descriptive tracking</strong> (what happened) to <strong>predictive simulation</strong> (what will happen).</p>
+                <ul>
+                    <li><strong>Healthcare:</strong> Transitioning from simple viability scores to personalized patient treatment simulations.</li>
+                    <li><strong>Sports:</strong> Running thousands of game simulations to test lineup efficacy against specific opponent habits before the game begins.</li>
+                    <li><strong>Property Management:</strong> Using local weather patterns, wear-and-tear data, and expense histories to predict and schedule system maintenance <em>before</em> any failure occurs.</li>
+                </ul>
+
+                <h3>My Portfolio Takeaway</h3>
+                <p>Whether in a fertility lab, a film room, or a corporate finance office, the pattern is consistent: AI identifies subtle, high-value indicators that the human eye misses. My focus is on designing systems that act as an <strong>"efficiency multiplier,"</strong> freeing specialists to focus on high-level strategy rather than routine data management.</p>
+                
+                <div style="border-top: 1px solid #c0c0c0; padding-top: 20px; margin-top: 30px; font-style: italic; color: #c0c0c0; font-size: 0.85rem;">
+                    <p><strong>References:</strong></p>
+                    <p>AIVF Ltd. (2026). <em>Next generation IVF: Clinical validation and platform efficiency metrics for the EMA™ software layer.</em> AIVF Research.</p>
+                    <p>McKinsey & Company. (2026). <em>How agentic AI can reshape real estate's operating model.</em> McKinsey & Company Real Estate Insights.</p>
+                    <p>SportsVisio. (2026). <em>SV Coach computer vision tracking pipeline and automated shot signature taxonomy.</em> SportsVisio Technical Documentation.</p>
+                </div>
+            </div>
+        </div>
+    </details>
 </main>
 
 <footer>
